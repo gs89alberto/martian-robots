@@ -3,7 +3,7 @@ import Coordinates from '../../entities/types/Coordinates';
 import Grid from '../../entities/types/Grid';
 import Position from '../../entities/types/Position';
 
-class mongoMarsExplorationRepository implements IMarsExplorationRepository {
+class MongoMarsExplorationRepository implements IMarsExplorationRepository {
   private dataSource;
   constructor(dataSource) {
     this.dataSource = dataSource;
@@ -42,4 +42,4 @@ class mongoMarsExplorationRepository implements IMarsExplorationRepository {
   }
 }
 
-export default mongoMarsExplorationRepository;
+export default MongoMarsExplorationRepository;
