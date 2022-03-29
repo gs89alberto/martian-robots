@@ -1,8 +1,8 @@
 import express, { Express, NextFunction, Request, Response } from 'express';
 import bodyParser from 'body-parser';
 import morgan from 'morgan';
-import MarsExplorationRepositoryImpl from '../../implementations/marsExplorationRepository/repository';
-import WebApiCommandRobotImpl from '../../implementations/commandRobot/web';
+import MarsExplorationRepositoryImpl from '../../implementations/marsExplorationRepository/MongoMarsExplorationRepository';
+import WebApiCommandRobotImpl from '../../implementations/commandRobot/WebApiCommandRobot';
 import MongoDBAdapter from '../persistence/marsDB';
 import { serverConfig } from './../config/config';
 import errorMiddleware from './middleware/error-middleware';

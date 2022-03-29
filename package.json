@@ -4,8 +4,11 @@
   "description": "NodeJs ExpressJs Docker - Martian Robots",
   "main": "index.js",
   "scripts": {
-    "test": "jest",
-    "test:cov": "jest --coverage"
+    "build": "npx rimraf ./dist && tsc --p tsconfig.json",
+    "start": "cross-env NODE_ENV=production node dist/index.js",
+    "dev": "cross-env NODE_ENV=development npx nodemon src/index.ts",
+    "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
+    "test:cov": "cross-env NODE_ENV=test jest --coverage"
   },
   "author": "AlbertoGS",
   "license": "ISC",
@@ -14,6 +17,7 @@
     "@types/jest": "^27.4.1",
     "@types/morgan": "^1.9.3",
     "@types/node": "^17.0.23",
+    "@types/supertest": "^2.0.12",
     "jest": "^27.5.1",
     "nodemon": "^2.0.15",
     "supertest": "^6.2.2",
