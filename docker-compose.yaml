@@ -1,0 +1,32 @@
+version: '3.8'
+
+services:
+  api-dev:
+    container_name: martian-robots_api_dev
+    image: martian-robots-api-dev:1.0.0
+    build:
+      context: .
+      target: api-dev
+      dockerfile: ./Dockerfile.dev
+    ports:
+      - 4001:4001
+      - 9229:9229
+    networks:
+      - martian-robots-network
+    restart: unless-stopped
+  api-prod:
+    container_name: martian-robots_api_prod
+    image: martian-robots-api-prod:1.0.0
+    build:
+      context: .
+      target: api-prod
+      dockerfile: ./Dockerfile
+    ports:
+      - 4000:4000
+      - 9229:9229
+    networks:
+      - martian-robots-network
+    restart: unless-stopped
+
+networks:
+  martian-robots-network:

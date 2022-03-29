@@ -1,4 +1,4 @@
-import HttpException from '../../frameworks-drivers/express/exceptions/HttpException';
+import HttpException from '../helpers/exceptions/HttpException';
 import Input from '../../entities/types/Input';
 import CommandRobot from '../../use-cases/CommandRobot';
 

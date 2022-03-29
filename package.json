@@ -8,7 +8,13 @@
     "start": "cross-env NODE_ENV=production node dist/index.js",
     "dev": "cross-env NODE_ENV=development npx nodemon src/index.ts",
     "test": "cross-env NODE_ENV=test jest --verbose --runInBand",
-    "test:cov": "cross-env NODE_ENV=test jest --coverage"
+    "test:cov": "cross-env NODE_ENV=test jest --coverage",
+    "docker-build:dev": "docker-compose up --build api-dev",
+    "docker-build:prod": "docker-compose up -d --build api-prod",
+    "docker-start:dev": "docker-compose up api-dev",
+    "docker-start:prod": "docker-compose up -d api-prod",
+    "docker-stop:dev": "docker-compose stop api-dev",
+    "docker-stop:prod": "docker-compose stop api-prod"
   },
   "author": "AlbertoGS",
   "license": "ISC",
