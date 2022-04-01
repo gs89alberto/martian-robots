@@ -72,7 +72,9 @@ $ npm install
 
 ```bash
 #.env must have the following environment variables
-PORT
+PORT_DEV
+PORT_PROD
+PORT_TEST
 MONGO_DB_URL_PRODUCTION
 MONGO_DB_URL_DEVELOPMENT
 MONGO_DB_URL_TESTING
